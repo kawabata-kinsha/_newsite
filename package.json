@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass src/scss/ --output www/assets/css/ --output-style compressed",
+    "es": "webpack --mode production",
     "watch:sass": "node-sass src/scss/ --output www/assets/css/ --output-style compressed --watch --source-map true",
-    "sass:master": "node-sass src/scss/ --output www/assets/css/ --output-style compressed",
     "watch:es": "webpack --watch",
-    "es:master": "webpack --mode production",
     "clean:css": "rimraf www/assets/css && mkdir -p www/assets/css",
     "clean:js": "rimraf www/assets/js && mkdir -p www/assets/js",
     "watch": "npm-run-all -p watch:*",
-    "build:master": "npm run clean:css && npm run sass:master && npm run clean:js && npm run es:master"
+    "build:master": "npm run clean:css && npm run sass && npm run clean:js && npm run es"
   },
   "author": "",
   "license": "ISC",
