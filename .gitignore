@@ -2,3 +2,4 @@ node_modules/
 *.css
 www/assets/js/*.js
 package-lock.json
+*.map
